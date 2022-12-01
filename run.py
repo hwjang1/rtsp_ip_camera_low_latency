@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
         terminate_t = timeit.default_timer()
         FPS = int(1. / (terminate_t - start_t))
-        cv2.putText(image, 'FPS : %s' % (str(FPS), (20, 20), 1, 1, (255, 255, 255), 2, cv2.LINE_AA))
+        cv2.putText(image, 'FPS : %s' % (str(FPS)), (20, 20), 1, 1, (255, 255, 255), 2, cv2.LINE_AA)
         cv2.imshow("RTSP_IP_CAMERA_LOW_LATENCY", image)
 
     cv2.destroyAllWindows()

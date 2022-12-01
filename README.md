@@ -6,5 +6,7 @@
 
 # 환경
 OS : Ubuntu 20.04 or higher
+
 GPU : NVIDIA GPU only
+
 Camera : RTSP or WebCam

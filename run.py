@@ -30,7 +30,7 @@ if __name__ == "__main__":
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         transformed_image = transform(image)
         tensor = torch.tensor(transformed_image, dtype=torch.float32)
-        tensor = tensor.unsqueeze(0)
+        tensor = tensor.unsqueeze(0).to(device)
         with torch.no_grad():
             detections = ssd_model(tensor)
         results_per_input = nvidia_ssd_processing_utils.decode_results(detections)
